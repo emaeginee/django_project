@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <table>
+        <h1>Add Comment</h1>
+        <form method="POST" class="post-form">
+            {% csrf_token %}
+            <table class="table table-bordered table-hover">
+                {{form.as_table}}
+            </table>
+<!--            <button type="submit" class="save btn btn-default">등록</button>-->
+                    <a href = "blog:add" class = "btn btn-info">등록</a>
+
+        </form>
+    </table>
+{% endblock%}
